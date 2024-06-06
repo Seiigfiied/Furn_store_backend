@@ -10,8 +10,7 @@ COPY target/Hardware-ECommerce-0.0.1-SNAPSHOT.jar app.jar
 # Expose port 9090 to the host
 EXPOSE 9090
 
-# Expose port 9090 to the host
-EXPOSE 3306
+
 
 # Start the application
 ENTRYPOINT ["java","-jar","app.jar"]
