@@ -1,31 +1,18 @@
-# # Use official OpenJDK image as the base image
-# FROM openjdk:latest
-
-# # Set the working directory
-# WORKDIR /app
-
-# # Copy the application jar file to the working directory
-# COPY target/Hardware-ECommerce-0.0.1-SNAPSHOT.jar app.jar
-
-# # Expose port 9090 to the host
-# EXPOSE 9090
-
-# # Expose port 9090 to the host
-# EXPOSE 3306
-
-# # Start the application
-# ENTRYPOINT ["java","-jar","app.jar"]
-# Use official OpenJDK image as the base image
+# Используем официальный образ OpenJDK как базовый образ
 FROM openjdk:latest
 
-# Set the working directory
+# Устанавливаем рабочий каталог
 WORKDIR /app
 
-# Copy the application jar file to the working directory
+# Копируем файл JAR вашего приложения в рабочий каталог
 COPY target/Hardware-ECommerce-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose port 9090 to the host
+# Открываем порт 9090 для связи с хостом
 EXPOSE 9090
 
-# Start the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Устанавливаем переменную окружения для указания хоста и порта MySQL
+ENV DB_HOST=mysql
+ENV DB_PORT=3306
+
+# Запускаем приложение с указанием параметров подключения к MySQL
+ENTRYPOINT ["java", "-jar", "app.jar", "--spring.datasource.url=jdbc:mysql://${DB_HOST}:${DB_PORT}/your_database_name", "--spring.datasource.username=your_username", "--spring.datasource.password=your_password"]
