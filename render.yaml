@@ -1,0 +1,4 @@
+services:
+  - name: second-hand-furniture
+    type: web
+    dockerfile: Dockerfile

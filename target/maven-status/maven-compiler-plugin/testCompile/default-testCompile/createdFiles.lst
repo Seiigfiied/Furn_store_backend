@@ -1,0 +1,8 @@
+com\chesnakov\hardwareecommerce\HardwareECommerceApplicationTests.class
+com\chesnakov\hardwareecommerce\OrderDetailServiceTest.class
+com\chesnakov\hardwareecommerce\JwtServiceTest.class
+com\chesnakov\hardwareecommerce\RoleServiceTest.class
+com\chesnakov\hardwareecommerce\CartServiceTest.class
+com\chesnakov\hardwareecommerce\UserServiceTest.class
+com\chesnakov\hardwareecommerce\ImageServiceTest.class
+com\chesnakov\hardwareecommerce\ProductServiceTest.class
