@@ -15,4 +15,4 @@ EXPOSE 3306
 
 # Start the application
 ENTRYPOINT ["java","-jar","app.jar"]
-Use official OpenJDK image as the base image
+# Use official OpenJDK image as the base image
